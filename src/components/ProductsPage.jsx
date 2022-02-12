@@ -8,9 +8,7 @@ function ProductsPage() {
 
   const [products, setProducts] = useState(jsonData);
 
-  // ------------------------ const myProducts = [...products];   // no hace falta hacer la copia de array inicial?
-
-  // Bonus - filter stock
+  // Bonus - filter stock useState
   const [stockFilter, setStockFilter] = useState(false);
 
 
@@ -27,25 +25,10 @@ function ProductsPage() {
   };
 
 
-  // Bonus - filter stock
+  // Bonus - filter stock function
   const onCheckbox = (e) => {
-    setStockFilter((state) => !state); // -------------- state puede ser cualquier cosa?? sí
+    setStockFilter((state) => !state);
   };
-  
-
-
-  /* const filterProducts = (searchTerm) => {
-    let filteredProducts;
-
-    if (searchTerm === '') {
-      filteredProducts = myProducts;
-    } else {
-      filteredProducts = myProducts.filter((product) => {
-        return product.name.toLowerCase() === searchTerm.toLowerCase();
-      });
-    }
-    setProducts(filteredProducts);
-  }; */
 
   return (
     <div>
